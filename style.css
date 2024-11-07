@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CUSTOM COLORS */
+:root {
+  --white: #fff;
+  --black: #121212;
+  --gray: #ccc;
+  --dark-gray: #333;
+}
+
+/* CSS RESET */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* GLOBALS CSS */
+
+button {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--dark-gray);
+  background-color: transparent;
+  color: var(--white);
+  height: fit-content;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--dark-gray);
+  }
+}
+
+input {
+  border: none;
+  background: var(--dark-gray);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.mensaje{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+/* CUSTOM CSS */
+
+.main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .main__titulo {
+    font-size: 2rem;
+    color: var(--gray);
+  }
+
+  .main__formulario {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    & div {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+  }
+  .main__productos{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    .main__producto{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  
+  .main__modal{
+    position: absolute;
+    top: 0;
+    background-color: #0009;
+    width: 100dvw;
+    height: 100dvh;
+
+    & div{
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;;
+    }
+
+    & div button{
+      background-color: var(--white);
+      color: var(--black);
+      font-weight: bold;
+    }
+
+    & div button:hover{
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
