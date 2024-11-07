@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista De Productos</title>
-</head>
-<body>
-  <h1>Lista De Productos</h1>
-
-  <form id="formulario">
-    <input type="text" id="nombre" placeholder="Nombre del producto" required>
-    <input type="number" id="precio" placeholder="Precio del producto" required>
-    <button type="submit">Añadir Producto</button>
-  </form>
-
-  
-  <div id="formulario-actualizacion" style="display: none;">
-    <h3>Actualizar Producto</h3>
-    <input type="text" id="nombre-actualizacion" placeholder="Nuevo nombre del producto" required>
-    <input type="number" id="precio-actualizacion" placeholder="Nuevo precio del producto" required>
-    <button id="boton-actualizar">Actualizar Producto</button>
-  </div>
-
-  
-  <button id="ordenarAscendente">Ordenar por precio (ascendente)</button>
-  <button id="ordenarDescendente">Ordenar por precio (descendente)</button>
-
-  
-  <ul id="productos-lista"></ul>
-
-  
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Lista De Productos</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="main__titulo">Lista De Productos</h1>
+      <form class="main__formulario" id="formulario">
+        <div>
+          <input
+          type="text"
+          id="nombre"
+          placeholder="Nombre del producto"
+          required
+          />
+          <input
+          type="number"
+          id="precio"
+          placeholder="Precio del producto"
+          required
+          />
+        </div>
+        <button type="submit">Añadir Producto</button>
+      </form>
+      <section class="main__modal" id="formulario-actualizacion" style="display: none">
+        <div>
+          <h2>Actualizar Producto</h2>
+          <input
+          type="text"
+            id="nombre-actualizacion"
+            placeholder="Nuevo nombre del producto"
+            required
+          />
+          <input
+            type="number"
+            id="precio-actualizacion"
+            placeholder="Nuevo precio del producto"
+            required
+            />
+            <button id="boton-actualizar">Actualizar Producto</button>
+        </div>
+        </section>
+        <section>
+          <button id="ordenarAscendente">Ordenar por precio (ascendente)</button>
+          <button id="ordenarDescendente">
+            Ordenar por precio (descendente)
+          </button>
+        </section>
+        <ul class="main__productos" id="productos-lista"></ul>
+      </main>
+    </body>
+    <script src="app.js"></script>
 </html>
